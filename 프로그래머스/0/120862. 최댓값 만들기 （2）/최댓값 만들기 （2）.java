@@ -6,9 +6,7 @@ class Solution {
         int answer = numbers[numbers.length - 1] * numbers[numbers.length - 2];
         
         if (numbers[1] < 0) {
-            if (answer < numbers[0] * numbers[1]) {
-                answer = numbers[0] * numbers[1];
-            }
+            answer = Math.max(answer, numbers[0] * numbers[1]);
         }
         
         return answer;
